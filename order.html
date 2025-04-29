@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order at Grandé Restaurant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="order.js"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="fixed w-full top-0 bg-white shadow-md p-5 flex justify-between items-center z-50">
+    <a href="index.html" class="text-2xl font-bold">Grandé Restaurant</a>
+    <div class="flex items-center space-x-6">
+      <button id="cartBtn" class="relative flex items-center text-lg hover:text-red-500 transition">
+        🛒
+        <span id="cartCount" class="ml-1 bg-red-500 text-white rounded-full px-2 py-0.5 text-xs">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Order Section -->
+  <section class="pt-32 pb-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10 text-center">Select Your Items 🍽️</h2>
+      <div class="grid md:grid-cols-3 gap-8" id="menuItems">
+        <!-- Items will be populated here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Popup -->
+  <div id="cartDropdown" class="fixed right-10 top-20 w-80 bg-white shadow-lg rounded-lg p-4 hidden">
+    <h3 class="font-bold text-xl mb-4">🛒 Your Cart</h3>
+    <ul id="cartItems" class="space-y-3"></ul>
+    <div class="font-bold mt-4 text-lg">Total: ₹<span id="cartTotal">0</span></div>
+    <button class="w-full mt-6 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg">Confirm Order</button>
+  </div>
+
+</body>
+</html>
 
