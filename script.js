@@ -41,7 +41,7 @@ function updateCart() {
   let total = 0;
   cart.forEach(item => {
     total += item.price;
-    cartItemsContainer.innerHTML += `<li class="text-sm">${item.name} - ₹${item.price}</li>`;
+    cartItemsContainer.innerHTML += `<li class="flex justify-between text-sm">${item.name} <span>₹${item.price}</span></li>`;
   });
   cartTotal.innerText = total;
   cartCount.innerText = cart.length;
@@ -51,9 +51,6 @@ cartBtn.addEventListener('click', () => {
   cartDropdown.classList.toggle('hidden');
 });
 
-// Initial render
 renderMenu();
-
-
 
 
