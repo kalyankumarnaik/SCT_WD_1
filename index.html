@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartNav Advanced</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- For animations -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <nav id="navbar" class="fixed top-0 w-full flex justify-between items-center p-6 transition-all duration-500 backdrop-blur-md bg-white/10 z-50">
+    <div class="text-2xl font-bold">SmartNav</div>
+    <ul class="hidden md:flex space-x-8 text-lg">
+      <li><a href="#home" class="hover:text-cyan-400 transition">Home</a></li>
+      <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
+      <li><a href="#services" class="hover:text-cyan-400 transition">Services</a></li>
+      <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
+    </ul>
+    <!-- Burger menu -->
+    <div id="burger" class="flex flex-col space-y-1 md:hidden cursor-pointer">
+      <div class="w-8 h-1 bg-white"></div>
+      <div class="w-8 h-1 bg-white"></div>
+      <div class="w-8 h-1 bg-white"></div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 right-0 bg-gray-800 w-2/3 h-screen transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-8 text-xl">
+    <a href="#home" class="hover:text-cyan-400">Home</a>
+    <a href="#about" class="hover:text-cyan-400">About</a>
+    <a href="#services" class="hover:text-cyan-400">Services</a>
+    <a href="#contact" class="hover:text-cyan-400">Contact</a>
+  </div>
+
+  <!-- Sections -->
+  <section id="home" class="h-screen flex justify-center items-center text-5xl">Home</section>
+  <section id="about" class="h-screen flex justify-center items-center text-5xl">About</section>
+  <section id="services" class="h-screen flex justify-center items-center text-5xl">Services</section>
+  <section id="contact" class="h-screen flex justify-center items-center text-5xl">Contact</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
