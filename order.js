@@ -28,3 +28,13 @@ function renderCart() {
 
   totalAmount.innerText = total.toFixed(0);
 }
+
+function confirmOrder() {
+  if (cart.length === 0) {
+    alert("Your cart is empty! Please add some items.");
+    return;
+  }
+  // Redirect to success page
+  window.location.href = "success.html";
+}
+
