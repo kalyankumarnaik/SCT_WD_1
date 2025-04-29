@@ -53,3 +53,7 @@ cartBtn.addEventListener('click', () => {
 
 // Initial render
 renderMenu();
+
+
+
+
