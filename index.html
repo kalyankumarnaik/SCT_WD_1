@@ -3,44 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SmartNav Advanced</title>
-  <!-- Tailwind CSS CDN -->
+  <title>Grandé Restaurant - Official</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- For animations -->
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <script defer src="script.js"></script>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-100 text-gray-900">
 
-  <nav id="navbar" class="fixed top-0 w-full flex justify-between items-center p-6 transition-all duration-500 backdrop-blur-md bg-white/10 z-50">
-    <div class="text-2xl font-bold">SmartNav</div>
-    <ul class="hidden md:flex space-x-8 text-lg">
-      <li><a href="#home" class="hover:text-cyan-400 transition">Home</a></li>
-      <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
-      <li><a href="#services" class="hover:text-cyan-400 transition">Services</a></li>
-      <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
-    </ul>
-    <!-- Burger menu -->
-    <div id="burger" class="flex flex-col space-y-1 md:hidden cursor-pointer">
-      <div class="w-8 h-1 bg-white"></div>
-      <div class="w-8 h-1 bg-white"></div>
-      <div class="w-8 h-1 bg-white"></div>
+  <!-- Navbar -->
+  <nav class="fixed w-full top-0 bg-white shadow-md p-5 flex justify-between items-center z-50">
+    <h1 class="text-2xl font-bold">Grandé Restaurant</h1>
+    <div class="flex items-center space-x-6">
+      <ul class="flex space-x-8 text-lg">
+        <li><a href="#menu" class="hover:text-red-500 transition">Menu</a></li>
+        <li><a href="#offers" class="hover:text-red-500 transition">Offers</a></li>
+        <li><a href="#contact" class="hover:text-red-500 transition">Contact</a></li>
+      </ul>
+      <!-- Cart -->
+      <div class="relative">
+        <button id="cartBtn" class="flex items-center text-lg hover:text-red-500 transition">
+          🛒
+          <span id="cartCount" class="ml-1 bg-red-500 text-white rounded-full px-2 py-0.5 text-xs">0</span>
+        </button>
+        <div id="cartDropdown" class="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 hidden">
+          <h2 class="font-bold text-lg mb-2">Cart Items</h2>
+          <ul id="cartItems" class="mb-4 space-y-2"></ul>
+          <div class="font-bold">Total: ₹<span id="cartTotal">0</span></div>
+        </div>
+      </div>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="fixed top-0 right-0 bg-gray-800 w-2/3 h-screen transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-8 text-xl">
-    <a href="#home" class="hover:text-cyan-400">Home</a>
-    <a href="#about" class="hover:text-cyan-400">About</a>
-    <a href="#services" class="hover:text-cyan-400">Services</a>
-    <a href="#contact" class="hover:text-cyan-400">Contact</a>
-  </div>
+  <!-- Hero -->
+  <section class="pt-32 pb-16 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551218808-94e220e084d2');">
+    <div class="bg-black/50 p-10 rounded-lg mx-auto max-w-4xl text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Dine with Elegance</h2>
+      <p class="text-xl text-gray-200 mb-4">Explore world cuisines crafted to perfection.</p>
+      <a href="#menu" class="px-6 py-3 bg-red-500 text-white rounded-full hover:bg-red-600 transition">See Menu</a>
+    </div>
+  </section>
 
-  <!-- Sections -->
-  <section id="home" class="h-screen flex justify-center items-center text-5xl">Home</section>
-  <section id="about" class="h-screen flex justify-center items-center text-5xl">About</section>
-  <section id="services" class="h-screen flex justify-center items-center text-5xl">Services</section>
-  <section id="contact" class="h-screen flex justify-center items-center text-5xl">Contact</section>
+  <!-- Menu -->
+  <section id="menu" class="py-20 bg-gray-50">
+    <h3 class="text-3xl font-bold text-center mb-12">Chef's Specials</h3>
+    <div class="grid md:grid-cols-3 gap-10 px-10" id="menuItems">
+      <!-- JS will generate items here -->
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- Offers -->
+  <section id="offers" class="py-20 bg-red-50 text-center">
+    <h3 class="text-3xl font-bold mb-6">🔥 Limited Time Offer</h3>
+    <p class="text-xl mb-4">Flat <span class="font-bold text-red-600">20% OFF</span> on all items today!</p>
+    <a href="#menu" class="inline-block mt-6 px-8 py-3 bg-red-500 text-white rounded-full hover:bg-red-600 transition">Order Now</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-900 text-white text-center">
+    <h3 class="text-3xl font-bold mb-4">Get In Touch</h3>
+    <p>📍 Grandé Hotel, Downtown</p>
+    <p>📞 +91 99999 88888</p>
+    <p>📧 dine@grandehotel.com</p>
+  </section>
+
 </body>
 </html>
+
