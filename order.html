@@ -72,14 +72,19 @@
     </div>
 
     <!-- Cart Summary -->
-    <div class="max-w-2xl mx-auto mt-16 bg-white p-8 rounded-lg shadow-lg">
+    <div class="max-w-2xl mx-auto mt-16 bg-white p-8 rounded-lg shadow-lg text-center">
       <h3 class="text-3xl font-bold mb-6">🛒 Your Cart</h3>
       <ul id="cartList" class="space-y-4"></ul>
       <div class="mt-6 text-2xl font-bold">Total: ₹<span id="totalAmount">0</span></div>
+
+      <!-- Confirm Order Button -->
+      <button onclick="confirmOrder()" class="mt-8 px-8 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition">
+        Confirm Order
+      </button>
     </div>
+
   </section>
 
 </body>
 </html>
-
 
